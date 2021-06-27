@@ -3,22 +3,19 @@ import './App.css';
 import FirstComponent from './components/FirstComponent';
 
 function App() {
+  const logMessage = () =>
+  {
+    console.log("This is our message")
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Hello World
         </p>
-        <FirstComponent/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          This is a link
-        </a>
+        <FirstComponent mood='sad' logFunction={logMessage}>
+          <button>Make me happy :)</button>
+        </FirstComponent>
       </header>
     </div>
   );
